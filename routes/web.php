@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ComicsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+ Route::get('/', function () {
     $comics = config('db.comics');
     $linksComics = config('db.linksComics');
     $linksDc = config('db.linksDc');
     $linksSites = config('db.linksSites');
     $linksShop = config('db.linksShop');
-    return view('home', compact('comics', 'linksComics', 'linksDc', 'linksSites', 'linksShop'));
+    return to_route('home', compact('comics', 'linksComics', 'linksDc', 'linksSites', 'linksShop'));
 });
 
 Route::get('/comics/{id}', function ($id) {
@@ -41,4 +41,7 @@ Route::get('/comics/{id}', function ($id) {
         }
     
 }
-)->name('comics.show');
+)->name('comics.show'); 
+ 
+
+Route::resource('comics', ComicController::class); 

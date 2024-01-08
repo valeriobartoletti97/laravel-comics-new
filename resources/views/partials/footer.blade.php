@@ -9,7 +9,7 @@
                         <ul>
                             @foreach ($linksComics as $link)
                             <li class="d-flex flex-column">
-                                <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                                <a class="pt-1 link-color" href="{{$link->href}}">{{ $link->title }}</a>
                             </li>
                             @endforeach
                         </ul>
@@ -17,7 +17,7 @@
                         <ul>
                             @foreach ($linksShop as $link)
                             <li class="d-flex flex-column">
-                                <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                                <a class="pt-1 link-color" href="{{$link->href}}">{{ $link->title }}</a>
                             </li>
                             @endforeach
                         </ul>                          
@@ -27,7 +27,7 @@
                         <ul>
                             @foreach ($linksDc as $link)
                             <li class="d-flex flex-column">
-                                <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                                <a class="pt-1 link-color" href="{{$link->href}}">{{ $link->title }}</a>
                             </li>
                             @endforeach
                         </ul>                    
@@ -37,7 +37,7 @@
                         <ul>
                             @foreach ($linksSites as $link)
                             <li class="d-flex flex-column">
-                                <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                                <a class="pt-1 link-color" href="{{$link->href}}">{{ $link->title }}</a>
                             </li>
                             @endforeach
                         </ul>        
